@@ -15,11 +15,14 @@ then push it into github.
 
 ## Update
 
-I am using leap-day theme, before running `undle exec jekyll serve` should update dependencies first.
+I am using leap-day theme, before running `bundle exec jekyll serve` should update dependencies first.
 ```
 bundle update
 ```
 you will see a lots of themes installed.
+
+PS: Dependency source should config like this
+`source "https://rubygems.org"`
 
 ### About Github blog.
 
@@ -27,7 +30,6 @@ Github would build automaitically after this repo was updated.
 
 So, there is no need add _site into repo.
 
-### About Source.
 
 https://zhuanlan.zhihu.com/p/51240503
 
