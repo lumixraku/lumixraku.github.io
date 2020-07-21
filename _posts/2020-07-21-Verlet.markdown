@@ -1,0 +1,64 @@
+# Verlet 韦尔莱积分法
+
+Verlet算法是经典力学（牛顿力学）中非常经典的一种积分方法，是对牛顿第二定律（运动方程）在计算机上运用的一种数值积分方法
+
+[韦尔莱积分法](https://zh.wikipedia.org/wiki/%E9%9F%A6%E5%B0%94%E8%8E%B1%E7%A7%AF%E5%88%86%E6%B3%95)
+
+## 基本韦尔莱积分法
+可以利用基本韦尔莱算法, 在已知当前位置和上一帧位置,以及步长情况下， 计算下一帧位置。
+
+![image](https://raw.githubusercontent.com/lumixraku/lumixraku.github.io/master/assets/pics/Verlet1.jpg)
+
+- r 表示位置
+- t 表示时间
+- Δt表示每一帧的时间
+- f(t) t时间物体收到的力
+
+可以得到下一帧的位置
+
+根据牛顿运动方程， [这里](http://www.zhixing123.cn/matlab/introduction-to-velocity-verlet-algorith.html) 也把此公式写为
+
+![image](https://raw.githubusercontent.com/lumixraku/lumixraku.github.io/master/assets/pics/Verlet2.jpg)
+
+
+## 速度韦尔莱积分法
+
+![image](https://raw.githubusercontent.com/lumixraku/lumixraku.github.io/master/assets/pics/Verlet3.jpg)
+
+给定t时刻的位置r 速度v，和力f，求t+Δt时刻的 r v
+
+### leapfrog intergration 蛙跳积分法
+
+https://zh.wikipedia.org/wiki/%E8%9B%99%E8%B7%B3%E7%A7%AF%E5%88%86%E6%B3%95
+
+![image](https://raw.githubusercontent.com/lumixraku/lumixraku.github.io/master/assets/pics/leapFrog.jpg)
+
+可见蛙跳积分法的第二种形式就是 速度韦尔莱积分法
+
+```
+For further reading, check http://julesjacobs.github.io/2019/03/15/leapfrog-verlet.html
+Leapfrog and Verlet are almost as simple as Euler’s method and use only one force calculation per time step.
+
+they are second order accurate (compared Euler’s method which is of order one), and they are symplectic and time reversible.
+
+他们具备二阶精度 并保持了物理系统中的时间可逆性与相空间体积元体积守恒的性质。
+```
+
+## Euler 欧拉法
+https://www.zhihu.com/question/34780726/answer/59795609
+
+参考白如冰的回答， 欧拉法又叫欧拉折线法，几何意义很明显，就是用折线逼近曲线。
+
+## 龙格－库塔法
+定义
+https://zh.wikipedia.org/wiki/%E9%BE%99%E6%A0%BC%EF%BC%8D%E5%BA%93%E5%A1%94%E6%B3%95
+
+精度上比欧拉法更高的求解常微分方程的数值法
+
+https://zhuanlan.zhihu.com/p/33947566
+
+[Reference]
+https://blog.mutoo.im/2013/12/verlet-integration/
+
+https://www.zhihu.com/question/22531466
+
