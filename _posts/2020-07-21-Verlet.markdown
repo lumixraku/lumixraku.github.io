@@ -7,7 +7,7 @@ Verlet算法是经典力学（牛顿力学）中非常经典的一种积分方�
 ## 基本韦尔莱积分法
 可以利用基本韦尔莱算法, 在已知当前位置和上一帧位置,以及步长情况下， 计算下一帧位置。
 
-![image](https://raw.githubusercontent.com/lumixraku/lumixraku.github.io/master/assets/pics/Verlet1.jpg)
+![image](https://raw.githubusercontent.com/lumixraku/lumixraku.github.io/master/assets/pics/2020-07-21/Verlet1.jpg)
 
 - r 表示位置
 - t 表示时间
@@ -18,12 +18,12 @@ Verlet算法是经典力学（牛顿力学）中非常经典的一种积分方�
 
 根据牛顿运动方程， [这里](http://www.zhixing123.cn/matlab/introduction-to-velocity-verlet-algorith.html) 也把此公式写为
 
-![image](https://raw.githubusercontent.com/lumixraku/lumixraku.github.io/master/assets/pics/Verlet2.jpg)
+![image](https://raw.githubusercontent.com/lumixraku/lumixraku.github.io/master/assets/pics/2020-07-21/Verlet2.jpg)
 
 
 ## 速度韦尔莱积分法
 
-![image](https://raw.githubusercontent.com/lumixraku/lumixraku.github.io/master/assets/pics/Verlet3.jpg)
+![image](https://raw.githubusercontent.com/lumixraku/lumixraku.github.io/master/assets/pics/2020-07-21/Verlet3.jpg)
 
 给定t时刻的位置r 速度v，和力f，求t+Δt时刻的 r v
 
@@ -31,7 +31,7 @@ Verlet算法是经典力学（牛顿力学）中非常经典的一种积分方�
 
 https://zh.wikipedia.org/wiki/%E8%9B%99%E8%B7%B3%E7%A7%AF%E5%88%86%E6%B3%95
 
-![image](https://raw.githubusercontent.com/lumixraku/lumixraku.github.io/master/assets/pics/leapFrog.jpg)
+![image](https://raw.githubusercontent.com/lumixraku/lumixraku.github.io/master/assets/pics/2020-07-21/leapFrog.jpg)
 
 可见蛙跳积分法的第二种形式就是 速度韦尔莱积分法
 
@@ -55,10 +55,13 @@ https://zh.wikipedia.org/wiki/%E9%BE%99%E6%A0%BC%EF%BC%8D%E5%BA%93%E5%A1%94%E6%B
 
 精度上比欧拉法更高的求解常微分方程的数值法
 
-https://zhuanlan.zhihu.com/p/33947566
+Read More https://zhuanlan.zhihu.com/p/33947566
 
-[Reference]
+
+## Reference
+```
+
 https://blog.mutoo.im/2013/12/verlet-integration/
 
 https://www.zhihu.com/question/22531466
-
+```
